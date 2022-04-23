@@ -64,6 +64,7 @@ namespace Semana05
             int idCategoria = 0;
             var item = (Categoria)dgvCategoria.SelectedItem;
             if (null == item) return;
+            idCategoria = Convert.ToInt32(item.IdCategoria);
 
             ManCategoria manCategoria = new ManCategoria(idCategoria);
             manCategoria.ShowDialog();
